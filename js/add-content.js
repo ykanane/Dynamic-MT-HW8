@@ -1,13 +1,12 @@
 /*
- File: HW6/js/add-content.js
+ File: js/add-content.js
  Full name: Yassir Kanane
- COMP 4601 Assignment 7
+ COMP 4601 Assignment 8
  Yassir Kanane, UMass Lowell Computer Science, yassir_kanane@student.uml.edu
  Updated on Dec. 1, 2019 at 3:47 PM */
 
-
-
-function generateTable(tabIndex, addTab){  //table index and boolean to add tab
+//This function generates the table based on parameters fetched from input form.
+function generateTable(tabIndex, addTab){  //table index and boolean to determine whether to a add tab
 
   //use parseInt function to convert to int
   var xFirst = parseInt(document.getElementById('row-first').value);
@@ -55,6 +54,7 @@ function generateTable(tabIndex, addTab){  //table index and boolean to add tab
   }
   tableHTML += "<tbody";
   table.innerHTML = tableHTML;
+	
   //if generate tab button was clicked, save table to a tab
   if(addTab == true){
     document.getElementById('tabs-' + tabIndex).appendChild(table);
@@ -105,9 +105,6 @@ $( "#add-tab" ).click(function() {
       $('#tabs').tabs('option', 'active', -1);  //change focus to newly created tab
        tabCounter++;
      }
-
-     //$("#tabs li").not('active').hide();
-
 })
 
 //delete all tabs except home tab, source: https://stackoverflow.com/questions/18874298/jquery-remove-all-elements-except-for-first-one
@@ -289,6 +286,7 @@ $(document).ready(function(){
   addSliders();
 
 });
+
 /*Custom method to check for floats and display error message
 Learned about this from: https://stackoverflow.com/questions/241145/jquery-validate-plugin-how-to-create-a-simple-custom-rule*/
 jQuery.validator.addMethod("checkFloat", function(value, element) {
