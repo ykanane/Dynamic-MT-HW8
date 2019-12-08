@@ -128,8 +128,8 @@ function addSliders(){
         range: "min",
         value: 1,
         step: 1,
-        min: -100,
-        max: 100,
+        min: -50,
+        max: 50,
         slide: function( event, ui ) {
             $( "#row-first" ).val( ui.value );
             if($( "#inputForm" ).valid()){ //validate slider value, dynamically update table if valid
@@ -153,8 +153,8 @@ function addSliders(){
         range: "min",
         value: 1,
         step: 1,
-        min: -100,
-        max: 100,
+        min: -50,
+        max: 50,
         slide: function( event, ui ) {
             $( "#row-last" ).val( ui.value );
             if($( "#inputForm" ).valid()){
@@ -177,8 +177,8 @@ function addSliders(){
         range: "min",
         value: 1,
         step: 1,
-        min: -100,
-        max: 100,
+        min: -50,
+        max: 50,
         slide: function( event, ui ) {
             $( "#col-first" ).val( ui.value );
             if($( "#inputForm" ).valid()){
@@ -201,8 +201,8 @@ function addSliders(){
         range: "min",
         value: 1,
         step: 1,
-        min: -100,
-        max: 100,
+        min: -50,
+        max: 50,
         slide: function( event, ui ) {
             $( "#col-last" ).val( ui.value );
             if($( "#inputForm" ).valid()){
@@ -295,5 +295,5 @@ jQuery.validator.addMethod("checkFloat", function(value, element) {
 
 //custom rule to ensure the range entered does not crash website
 jQuery.validator.addMethod("checkRange", function(value, element) {
-    return this.optional(element) || (-100 <= value)&& (value <= 100);
-}, "Please enter an integer between -100 and 100");
+    return this.optional(element) || (-50 <= value)&& (value <= 50);
+}, "Please enter an integer between -50 and 50");
