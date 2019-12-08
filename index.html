@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--
- File: HW6/index.html
+ File:index.html
  Full name: Yassir Kanane
- COMP 4601 Assignment 7
+ COMP 4601 Assignment 8
  Yassir Kanane, UMass Lowell Computer Science, yassir_kanane@student.uml.edu
- Updated on Dec. 1, 2019 at 3:47 PM
+ Updated on Dec. 7, 2019 at 9:45 PM
  This is a dynamic Multiplication table web app
 -->
 
@@ -39,7 +39,7 @@
                     <div class="col-sm-6">
                       <!-- Set form method to prevent submit from refreshing -->
                       <form id="inputForm" action="" method="GET">
-                        <p>Please enter one integer between -100 to 100 in each box for horizontal axis bounds, order does not matter:</p>
+                        <p>Please enter one integer between -50 to 50 in each box for horizontal axis bounds, order does not matter:</p>
                         <!-- Assign default values for all forms to generated a default table-->
                         <input type="number" name="rowFirst" id="row-first" value=1><br>
                         <div id="slider-row-first"></div>
@@ -47,7 +47,7 @@
                         <input type="number" name="rowLast" id="row-last" value=10><br>
                         <div id="slider-row-last"></div>
 
-                        <p>Please enter one integer between -100 to 100 in each box for vertical axis bounds, order does not matter:</p>
+                        <p>Please enter one integer between -50 to 50 in each box for vertical axis bounds, order does not matter:</p>
                         <input type="number" name="colFirst" id="col-first" value=1><br>
                         <div id="slider-col-first"></div>
 
@@ -76,20 +76,19 @@
 
 
        <!-- scripts for jquery and javascript functionally-->
-  		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  				integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  				crossorigin="anonymous"></script>
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-  	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js"></script>
-  		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-          crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
-
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-          integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-          crossorigin="anonymous"></script>
-      <script src="js/add-content.js"></script>
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+             crossorigin="anonymous"></script>
+       <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+             crossorigin="anonymous"></script>
+       <script src="js/add-content.js"></script>
 
    </body>
 </html>

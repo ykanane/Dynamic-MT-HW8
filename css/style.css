@@ -1,9 +1,9 @@
 /*
  File: HW6/css/styles.css
  Full name: Yassir Kanane
- COMP 4601 Assignment 7
+ COMP 4601 Assignment 8
  Yassir Kanane, UMass Lowell Computer Science, yassir_kanane@student.uml.edu
- Updated on Nov. 26, 2019 at 3:47 PM */
+ Updated on Dec. 7, 2019 at 3:47 PM */
 
 /*Defining table properties, source: https://www.w3schools.com/html/html_tables.asp */
 th, thead {
@@ -59,13 +59,11 @@ h1 {
   color: black;
 }
 
-
 /*set dimensions for sliders*/
 #slider-row-first, #slider-row-last, #slider-col-first, #slider-col-last{
   margin-top: 10px;
   margin-bottom: 5px;
   width: 250px;
-
 }
 
 /*format input forms to give spacing and round borders*/
@@ -74,8 +72,8 @@ h1 {
   margin: 5px;
   text-align: center;
   font: italic 120% fantasy;
-
 }
+
 #add-tab, #delete-all{
 border-radius: 50px;
 margin: 5px;
@@ -92,8 +90,6 @@ body{
   background-color: cyan;
   border-radius: 20px;
 }
-
-
 
 /*Modify table-responsive bootstrap class to always show scroll bars and have a fixed size
 https://stackoverflow.com/questions/25777374/always-show-scrollbar-in-bootstrap-table-responsive*/
