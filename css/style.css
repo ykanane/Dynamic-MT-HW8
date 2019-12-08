@@ -1,0 +1,128 @@
+/*
+ File: HW6/css/styles.css
+ Full name: Yassir Kanane
+ COMP 4601 Assignment 7
+ Yassir Kanane, UMass Lowell Computer Science, yassir_kanane@student.uml.edu
+ Updated on Nov. 26, 2019 at 3:47 PM */
+
+/*Defining table properties, source: https://www.w3schools.com/html/html_tables.asp */
+th, thead {
+  border: 2px solid white;
+  color: white;
+  background: black;
+}
+
+/*Used two different nth-child combinations to get a checkered like style
+used this to play around and test things https://css-tricks.com/examples/nth-child-tester/*/
+tr:nth-child(2n) td:nth-child(2n+1){
+  border: 2px solid black;
+  background: white;
+}
+tr:nth-child(2n+1) td:nth-child(2n){
+  border: 2px solid black;
+  background: white;
+}
+td{
+  border: 2px solid black;
+  background: cyan;
+}
+
+/*modify the jQuery validator's error class that gets automatically generated*/
+.error {
+  color: red;
+  display: block;
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+h1 {
+ color: white;
+ background-image: url("../codepic.jpg");
+ background-size: auto;
+ text-align: center;
+ font: italic 250% fantasy;
+}
+h1 {
+  font: italic 250% fantasy;
+  border: 3px ridge black;
+  border-radius: 20px;
+  text-align: center;
+}
+/*set padding for forms*/
+#row-first, #row-last, #col-first, #col-last{
+  padding-top: 10px;
+}
+
+#inputForm {
+  margin-left: 20px;
+  font: italic 120% fantasy;
+  color: black;
+}
+
+
+/*set dimensions for sliders*/
+#slider-row-first, #slider-row-last, #slider-col-first, #slider-col-last{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 250px;
+
+}
+
+/*format input forms to give spacing and round borders*/
+#home-tab input, button {
+  border-radius: 50px;
+  margin: 5px;
+  text-align: center;
+  font: italic 120% fantasy;
+
+}
+#add-tab, #delete-all{
+border-radius: 50px;
+margin: 5px;
+text-align: center;
+font: italic 120% fantasy;
+}
+
+body{
+  background-color: #1F6AB6;
+}
+
+#home-tab{
+  color: black;
+  background-color: cyan;
+  border-radius: 20px;
+}
+
+
+
+/*Modify table-responsive bootstrap class to always show scroll bars and have a fixed size
+https://stackoverflow.com/questions/25777374/always-show-scrollbar-in-bootstrap-table-responsive*/
+
+.table-responsive {
+  max-width: 600px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.table-responsive::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.table-responsive::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+.table-responsive::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}

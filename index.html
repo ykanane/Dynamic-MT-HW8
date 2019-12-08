@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+ File: HW6/index.html
+ Full name: Yassir Kanane
+ COMP 4601 Assignment 7
+ Yassir Kanane, UMass Lowell Computer Science, yassir_kanane@student.uml.edu
+ Updated on Dec. 1, 2019 at 3:47 PM
+ This is a dynamic Multiplication table web app
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynamic Multiplication Table</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link href="css/style.css" type="text/css"
+        rel="stylesheet" />
+    </head>
+
+    <body>
+
+        <div class="container">
+        <h1>Dynamic Multiplication Table</h1>
+        <!-- Learned about tabs here: https://jqueryui.com/tabs/#manipulation -->
+         <div class= "ui-tabs-nav" id="tabs">
+           <ul>
+             <li><a href="#home-tab">Home</a></li>
+           </ul>
+            <!--
+            Form specifies that the input type is a number and enforces that, the only cases
+            that need to be checked are blank and a lone negative sign, which is handled in the
+            javascript-->
+            <div id="home-tab">
+                <div class ="row">
+                    <div class="col-sm-6">
+                      <!-- Set form method to prevent submit from refreshing -->
+                      <form id="inputForm" action="" method="GET">
+                        <p>Please enter one integer between -100 to 100 in each box for horizontal axis bounds, order does not matter:</p>
+                        <!-- Assign default values for all forms to generated a default table-->
+                        <input type="number" name="rowFirst" id="row-first" value=1><br>
+                        <div id="slider-row-first"></div>
+
+                        <input type="number" name="rowLast" id="row-last" value=10><br>
+                        <div id="slider-row-last"></div>
+
+                        <p>Please enter one integer between -100 to 100 in each box for vertical axis bounds, order does not matter:</p>
+                        <input type="number" name="colFirst" id="col-first" value=1><br>
+                        <div id="slider-col-first"></div>
+
+                        <input type="number" name="colLast" id="col-last" value=10><br>
+                        <div id="slider-col-last">
+                        </div>
+                        <!--<input type="button" id="submitButton" value = "GENERATE" disabled="true">  Not needed in hw8-->
+                        <button type="button" id="add-tab">Generate Table Tab</button>
+                        <button type="button" id="delete-all">Delete All Tabs</button>
+
+                      </form>
+                      <br>
+                   </div>
+
+                  <div class="col-sm-6">
+                        <p>Once table is generated, scroll horizontally by clicking and dragging or using the scroll bar in the bottom of the table </p>
+                          <!-- Placeholder for table, uses bootstrap classes-->
+                        <div class="table-responsive">
+                              <table class="table table-striped" id="table-1">
+                              </table>
+                        </div>
+                  </div>
+               </div> <!-- end row div-->
+            </div> <!--end home tab div -->
+      </div><!-- end tabs div -->
+
+
+       <!-- scripts for jquery and javascript functionally-->
+  		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  				integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  				crossorigin="anonymous"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+  	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js"></script>
+  		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+          integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+          crossorigin="anonymous"></script>
+      <script src="js/add-content.js"></script>
+
+   </body>
+</html>
