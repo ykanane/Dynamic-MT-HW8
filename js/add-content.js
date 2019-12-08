@@ -3,7 +3,7 @@
  Full name: Yassir Kanane
  COMP 4601 Assignment 8
  Yassir Kanane, UMass Lowell Computer Science, yassir_kanane@student.uml.edu
- Updated on Dec. 1, 2019 at 3:47 PM */
+ Updated on Dec. 8, 2019 at 3:47 PM */
 
 //This function generates the table based on parameters fetched from input form.
 function generateTable(tabIndex, addTab){  //table index and boolean to determine whether to a add tab
@@ -65,6 +65,7 @@ function generateTable(tabIndex, addTab){  //table index and boolean to determin
 var tabTemplate = "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>";
 var tabCounter = 2;
 var tabs = $( "#tabs" ).tabs();
+var numberOfTabs = 1;
 
 // function to add new tabs with table html already set up
 function addTab() {
@@ -96,9 +97,15 @@ function addTab() {
   tabs.find( ".ui-tabs-nav" ).append( li );
   tabs.append( "<div id='" + id + "'>" + tabContentHtml + "</div>" );
   tabs.tabs( "refresh" );
+  numberOfTabs++;
 }
 
 $( "#add-tab" ).click(function() {
+  //Avoid slowing page with too many tabs.
+  if(numberOfTabs > 10){
+      alert("Sorry, only 10 additional tabs are allowed. Please delete one and try again.");
+      return;
+  }
   if ($('#inputForm').valid()) {
        addTab(); //add tab and create template table under tabs
        generateTable(tabCounter, true); //pass index for new table and true flag to add a tab
@@ -111,6 +118,7 @@ $( "#add-tab" ).click(function() {
 $("#delete-all").on("click", function() {
    $("#tabs li").not(':first').remove();
     tabs.tabs( "refresh" );
+    numberOfTabs = 1; //reset number of tabs
 });
 
 // Delete the tab when the "X" in top right is click. x is "ui-icon-close"
@@ -118,6 +126,7 @@ $("#delete-all").on("click", function() {
    var panelId = $( this ).closest( "li" ).remove().attr( "aria-controls" );
    $( "#" + panelId ).remove();
    tabs.tabs( "refresh" );
+   numberOfTabs--;
  });
 
 //Slider functions begin here
